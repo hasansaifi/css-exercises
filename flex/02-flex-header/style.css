@@ -1,23 +1,37 @@
 .header  {
   font-family: monospace;
   background: papayawhip;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  padding: 8px; /* mistake one, I added margin in logo instead of padding in header*/
 }
 
 .logo {
-  font-size: 48px;
+  font-size: 28px;
   font-weight: 900;
-  color: tomato;
+  color: tomato; 
   background: white;
   padding: 4px 32px;
+
 }
+
 
 ul {
   /* this removes the dots on the list items*/
   list-style-type: none;
+  display: flex;
+  gap: 8px;
+
+  margin: 0;
+  padding: 0;
+  
 }
 
 a {
-  font-size: 22px;
+  font-size: 18px;
   background: white;
   padding: 8px;
   /* this removes the line under the links */
