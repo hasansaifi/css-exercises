@@ -9,7 +9,7 @@ Just like you did in the `02-flex-header` exercise, you'll be nesting flex conta
 ## Desired outcome
 As with the last example, this one needs to be flexible in the middle, with items pushed to the left and right.
 
-![png](./desired-outcome.png)
+![png](./desired-outcome.png) 
 
 ![gif](./desired-outcome.gif)
 
