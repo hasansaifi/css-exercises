@@ -3,7 +3,7 @@
 html, body {
   height: 100%;
 }
-
+ 
 body {
   font-family: Roboto, sans-serif;
   margin: 0;
@@ -66,4 +66,28 @@ button.cancel {
   background: white;
   border: 1px solid #ddd;
   color: royalblue;
+}
+/* My solution */
+
+.modal {
+  display: flex;
+  align-items: flex-start;
+  padding: 15px;
+  gap: 15px;
+}
+
+.header-container {
+  font-weight: bold;
+  display: flex;
+  flex-direction: row;
+  justify-content: start;
+}
+
+.close-button {
+  margin-left: auto;
+  flex-shrink: 0;
+}
+
+.text {
+  margin: 10px 0;
 }
