@@ -1,14 +1,21 @@
-* {
+* { 
   margin: 0;
   padding: 0;
 }
 
 .container {
-  text-align: center;
+  /* text-align: center; */
+  display: grid;
+  grid-template: 2fr 1fr 20fr 1fr / 1fr 4fr;
+  grid-template-areas: 
+      "header header"
+      "sidebar nav"
+      "sidebar article"
+      "footer footer";
+  gap: 4px;
 }
 
 .container div {
-  padding: 15px;
   font-size: 32px;
   font-family: Helvetica;
   font-weight: bold;
@@ -16,19 +23,43 @@
 }
 
 .header {
+  grid-area: header;
+  display: grid;
+  align-items: center;
+  grid-template: none / 1fr 4fr;
   background-color: #393f4d;
+  padding: 0 30px 0 15px;
+}
+
+.logo {
+  justify-self: left;
+}
+
+.menu ul{
+  display: grid;
+  justify-items: right;
+  grid-template: none/ repeat(4, 1fr);
 }
 
 .menu ul,
 .menu li {
+
+  list-style: none;
   font-size: 16px;
 }
 
 .sidebar {
+  grid-area: sidebar;
+  display: grid;
+  padding: 15px;
+  gap: 50px;
   background-color: #C50208;
 }
 
 .sidebar .photo {
+  display: grid;
+  align-items: center;
+  justify-items: center;
   background-color: white;
   color: black;
   font-size: 12px;
@@ -38,6 +69,9 @@
 
 
 .sidebar .side-content {
+  display: grid;
+  align-items: center;
+  justify-items: center;
   background-color: white;
   color: black;
   font-size: 16px;
@@ -45,15 +79,31 @@
 }
 
 .nav {
+  grid-area: nav;
+  display: grid;
   background-color: #C50208;
+}
+
+.nav ul{
+  display: grid;
+  align-items: center;
+  justify-items: center;
+  grid-template: none/ repeat(3, 1fr);
 }
 
 .nav ul li {
   font-size: 16px;
   text-transform: uppercase;
+  list-style: none;
+
 }
 
 .article {
+  grid-area: article;
+  display: grid;
+  grid-template: repeat(3, 200px) / repeat(auto-fit, minmax(250px,1fr ));
+  padding: 15px;
+  gap: 15px;
   background-color: #bccbde;
 }
 
@@ -68,6 +118,7 @@
   background-color: #FFFFFF;
   color: black;
   text-align: center;
+  padding: 15px;
 }
 
 .card p {
@@ -82,6 +133,11 @@
 }
 
 .footer {
+  display: grid;
+  align-items: center;
+  justify-items: center;
+  grid-area: footer;
+  padding: 10px 0;
   background-color: #393f4d;
 }
 
