@@ -1,10 +1,13 @@
-body,
+body, 
 html {
   height: 100%;
   margin: 0;
 }
 
 .container {
+  display: grid;
+  grid-template: 10% 15% 60% 10% / 20% 78%;
+  gap: 15px;
   text-align: center;
   height: 100%;
   padding: 16px;
